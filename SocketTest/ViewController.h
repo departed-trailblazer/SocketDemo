@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController
+#import "TCPClient.h"
+#import "TCPServer.h"
+@interface ViewController : UIViewController<TCPClientDelegate,TCPServerDelegate>
 
 
 @end

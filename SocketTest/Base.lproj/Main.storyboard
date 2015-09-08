@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,8 +16,69 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TSQ-jx-BTX">
+                                <rect key="frame" x="36" y="90" width="528" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzT-dm-fmN">
+                                <rect key="frame" x="225" y="160" width="150" height="30"/>
+                                <color key="backgroundColor" red="0.58336759869999999" green="0.44192023029999999" blue="0.81111225330000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6yQ-0z-ZWs"/>
+                                    <constraint firstAttribute="width" constant="150" id="spN-Po-jqR"/>
+                                </constraints>
+                                <state key="normal" title="Send">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendMassage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="iMk-zp-R7L"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Try-Bt-TSR">
+                                <rect key="frame" x="225" y="220" width="150" height="30"/>
+                                <color key="backgroundColor" red="0.80234888979999996" green="0.71792763159999995" blue="0.4243164062" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="FcQ-K4-K6o"/>
+                                </constraints>
+                                <state key="normal" title="server">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="serverSend:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Yn3-Ka-Uut"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vmn-3V-Cvo">
+                                <rect key="frame" x="36" y="290" width="528" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="4Tb-5P-O8l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TSQ-jx-BTX" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="70" id="26L-S1-oF4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vmn-3V-Cvo" secondAttribute="trailing" constant="20" id="4hH-5T-yqX"/>
+                            <constraint firstItem="TSQ-jx-BTX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="8rx-6I-Ol9"/>
+                            <constraint firstItem="Vmn-3V-Cvo" firstAttribute="top" secondItem="Try-Bt-TSR" secondAttribute="bottom" constant="40" id="IzP-iX-1wv"/>
+                            <constraint firstItem="Vmn-3V-Cvo" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="MO1-ob-6uF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TSQ-jx-BTX" secondAttribute="trailing" constant="20" id="TBc-N0-hvV"/>
+                            <constraint firstItem="Try-Bt-TSR" firstAttribute="leading" secondItem="gzT-dm-fmN" secondAttribute="leading" id="c3V-vI-R34"/>
+                            <constraint firstAttribute="centerX" secondItem="gzT-dm-fmN" secondAttribute="centerX" id="j0h-hQ-QOa"/>
+                            <constraint firstItem="Try-Bt-TSR" firstAttribute="top" secondItem="gzT-dm-fmN" secondAttribute="bottom" constant="30" id="oaA-XO-sED"/>
+                            <constraint firstItem="gzT-dm-fmN" firstAttribute="top" secondItem="TSQ-jx-BTX" secondAttribute="bottom" constant="40" id="rJN-hv-vj4"/>
+                            <constraint firstItem="Try-Bt-TSR" firstAttribute="trailing" secondItem="gzT-dm-fmN" secondAttribute="trailing" id="y4q-aP-bWO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="TSQ-jx-BTX" id="lPQ-af-9NL"/>
+                        <outlet property="textLabel" destination="Vmn-3V-Cvo" id="M2P-g2-bTc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

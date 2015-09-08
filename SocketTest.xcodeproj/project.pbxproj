@@ -14,6 +14,9 @@
 		B3B130FE1B6719D00016E2F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3B130FD1B6719D00016E2F6 /* Images.xcassets */; };
 		B3B131011B6719D00016E2F6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3B130FF1B6719D00016E2F6 /* LaunchScreen.xib */; };
 		B3B1310D1B6719D00016E2F6 /* SocketTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B1310C1B6719D00016E2F6 /* SocketTestTests.m */; };
+		B3B1311A1B6719E20016E2F6 /* TCPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B131171B6719E20016E2F6 /* TCPClient.m */; };
+		B3B1311B1B6719E20016E2F6 /* TCPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B131191B6719E20016E2F6 /* TCPServer.m */; };
+		B3E289B61B67876400E8590E /* Xml.txt in Resources */ = {isa = PBXBuildFile; fileRef = B3E289B51B67876400E8590E /* Xml.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,11 @@
 		B3B131061B6719D00016E2F6 /* SocketTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocketTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3B1310B1B6719D00016E2F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3B1310C1B6719D00016E2F6 /* SocketTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocketTestTests.m; sourceTree = "<group>"; };
+		B3B131161B6719E20016E2F6 /* TCPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPClient.h; sourceTree = "<group>"; };
+		B3B131171B6719E20016E2F6 /* TCPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPClient.m; sourceTree = "<group>"; };
+		B3B131181B6719E20016E2F6 /* TCPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPServer.h; sourceTree = "<group>"; };
+		B3B131191B6719E20016E2F6 /* TCPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPServer.m; sourceTree = "<group>"; };
+		B3E289B51B67876400E8590E /* Xml.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Xml.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,11 @@
 		B3B130EF1B6719D00016E2F6 /* SocketTest */ = {
 			isa = PBXGroup;
 			children = (
+				B3E289B51B67876400E8590E /* Xml.txt */,
+				B3B131161B6719E20016E2F6 /* TCPClient.h */,
+				B3B131171B6719E20016E2F6 /* TCPClient.m */,
+				B3B131181B6719E20016E2F6 /* TCPServer.h */,
+				B3B131191B6719E20016E2F6 /* TCPServer.m */,
 				B3B130F41B6719D00016E2F6 /* AppDelegate.h */,
 				B3B130F51B6719D00016E2F6 /* AppDelegate.m */,
 				B3B130F71B6719D00016E2F6 /* ViewController.h */,
@@ -202,6 +215,7 @@
 				B3B130FC1B6719D00016E2F6 /* Main.storyboard in Resources */,
 				B3B131011B6719D00016E2F6 /* LaunchScreen.xib in Resources */,
 				B3B130FE1B6719D00016E2F6 /* Images.xcassets in Resources */,
+				B3E289B61B67876400E8590E /* Xml.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,8 +233,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3B1311A1B6719E20016E2F6 /* TCPClient.m in Sources */,
 				B3B130F91B6719D00016E2F6 /* ViewController.m in Sources */,
 				B3B130F61B6719D00016E2F6 /* AppDelegate.m in Sources */,
+				B3B1311B1B6719E20016E2F6 /* TCPServer.m in Sources */,
 				B3B130F31B6719D00016E2F6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +432,7 @@
 				B3B131121B6719D00016E2F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3B131131B6719D00016E2F6 /* Build configuration list for PBXNativeTarget "SocketTestTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +441,7 @@
 				B3B131151B6719D00016E2F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
